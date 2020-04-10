@@ -19,9 +19,17 @@
     </head>
 
     <body>
-		<% out.print("Hola ");%>
-		<% out.print((String)session.getAttribute("nombre"));%>
-		<% out.print(", vos no esistí. ");%>
+    	<div class="container">
+			<div class="jumbotron">
+			  <h1 style="text-align: center">Hola, <% out.print((String)session.getAttribute("nombre"));%>.</h1>
+			  <div class="alert alert-danger" style="text-align: center">
+				<p>
+					<strong> <% out.print("No estás en la base de datos mágica."); %> </strong>
+				</p>
+			  </div>
+			</div>
+		</div>
+				
 	</body>
 
 </html>

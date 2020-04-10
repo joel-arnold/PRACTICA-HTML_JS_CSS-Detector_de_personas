@@ -38,6 +38,15 @@ public class Identificador extends HttpServlet {
 			sesion.setAttribute("nombre", persona.getNombre());
 			sesion.setAttribute("fechaNac", persona.getFechaNac());
 			sesion.setAttribute("telefono", persona.getTelefono());
+			sesion.setAttribute("colorFav", persona.getColorFav());
+			sesion.setAttribute("habilidad1", persona.getHabilidad1());
+			sesion.setAttribute("habilidad2", persona.getHabilidad2());
+			sesion.setAttribute("habilidad3", persona.getHabilidad3());
+			sesion.setAttribute("facebook", persona.getFacebook());
+			sesion.setAttribute("instagram", persona.getInstagram());
+			sesion.setAttribute("linkedin", persona.getLinkedIn());
+			sesion.setAttribute("direccion", persona.getDireccion());
+			sesion.setAttribute("correo", persona.getCorreo());
 			response.sendRedirect("perfil/perfil.jsp");
 		}
 		else {

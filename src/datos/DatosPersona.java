@@ -1,7 +1,5 @@
 package datos;
 
-import java.awt.Image;
-import java.io.InputStream;
 import java.sql.*;
 import utilidades.Excepcion;
 import entidades.*;
@@ -22,6 +20,15 @@ public class DatosPersona {
 				p.setNombre(rs.getString("nombre"));
 				p.setFechaNac(rs.getString("fechaNac"));
 				p.setTelefono(rs.getString("telefono"));
+				p.setColorFav(rs.getString("colorFav"));
+				p.setHabilidad1(rs.getString("habilidad1"));
+				p.setHabilidad2(rs.getString("habilidad2"));
+				p.setHabilidad3(rs.getString("habilidad3"));
+				p.setFacebook(rs.getString("facebook"));
+				p.setInstagram(rs.getString("instagram"));
+				p.setLinkedIn(rs.getString("linkedin"));
+				p.setDireccion(rs.getString("direccion"));
+				p.setCorreo(rs.getString("correo"));
 			}
 			else {
 				p = new Persona();
