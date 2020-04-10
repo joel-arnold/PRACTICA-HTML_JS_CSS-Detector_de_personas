@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">  
-  <head>    
-    <title>Detector de personas</title>    
-    <meta charset="UTF-8">
-    <meta name="title" content="Detector mágico de personas">
-    <meta name="description" content="Esta página te detecta magicamente quién es quién">
-    
-    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>-->
-	<!--<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>-->
-	
-	<!--<script src="estilo/jquery-3.4.1.min.js"></script>
-    <link href="estilo/fontawesome/css/all.css" rel="stylesheet">
-    <link href="estilo/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<script src="estilo/bootstrap/js/bootstrap.min.js"></script> -->
-	
-	<link href="estilo/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-	<link href="estilo/fontawesome/css/font-awesome.min.css" rel="stylesheet">
-	 
-	<script src="estilo/jquery-3.4.1.min.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<head>    
+	    <title>Detector de personas</title>    
+	    <meta charset="UTF-8">
+	    <meta name="title" content="Detector mágico de personas">
+	    <meta name="description" content="Esta página te detecta magicamente quién es quién">
 	    
-  </head>  
+		<script src="estilo/jquery-3.4.1.min.js"></script>
+	    <link href="estilo/fontawesome/css/all.css" rel="stylesheet">
+	    <link href="estilo/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<script src="estilo/bootstrap/js/bootstrap.min.js"></script>	
+  	</head>  
+
 	<body>
 	  <div class="container">
 	    <div class="row">
@@ -33,7 +24,7 @@
 	            <h5 class="card-title text-center">Detector mágico de personas</h5>
 	            <form class="form-signin" action="Identificador" method=post>
 	              <div class="form-label-group">
-	                <input type="text" id="inputUserame" name="persona" class="form-control" placeholder="¿Quién sos?" required autofocus>
+	                <input type="text" id="inputUserame" class="form-control" placeholder="¿Quién sos?" name="persona" required autofocus>
 	                <br>
 	              </div>
 	              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Detectar</button>
@@ -44,4 +35,5 @@
 	    </div>
 	  </div>
 	</body>
+	
 </html>
