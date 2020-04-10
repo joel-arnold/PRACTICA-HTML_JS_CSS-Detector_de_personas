@@ -1,5 +1,7 @@
 package datos;
 
+import java.awt.Image;
+import java.io.InputStream;
 import java.sql.*;
 import utilidades.Excepcion;
 import entidades.*;
@@ -20,6 +22,10 @@ public class DatosPersona {
 				p.setNombre(rs.getString("nombre"));
 				p.setFechaNac(rs.getString("fechaNac"));
 				p.setTelefono(rs.getString("telefono"));
+			}
+			else {
+				p = new Persona();
+				p.setNombre("noExiste");
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

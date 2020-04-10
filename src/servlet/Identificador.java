@@ -34,18 +34,15 @@ public class Identificador extends HttpServlet {
 		
 		persona = controlador.buscarPersona(nombre);
 		
-		if(persona != null) {
+		if(persona.getNombre() != "noExiste") {
 			sesion.setAttribute("nombre", persona.getNombre());
 			sesion.setAttribute("fechaNac", persona.getFechaNac());
 			sesion.setAttribute("telefono", persona.getTelefono());
-			System.out.println(persona.getNombre());
-			System.out.println(persona.getFechaNac());
-			System.out.println(persona.getTelefono());
-			response.sendRedirect("resultado.jsp");
+			response.sendRedirect("perfil/perfil.jsp");
 		}
 		else {
-			sesion.setAttribute("mensaje", "Salí cabeza, vos no existís");
-			response.sendRedirect("resultado.jsp");
+			sesion.setAttribute("nombre", nombre);
+			response.sendRedirect("noExiste.jsp");
 		}
 		
 		
