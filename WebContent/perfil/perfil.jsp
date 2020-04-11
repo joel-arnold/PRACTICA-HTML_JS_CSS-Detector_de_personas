@@ -143,9 +143,6 @@
 
   </div>
 	
-  <a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>
-  <a onclick="M.toast({html: 'Joel Arnold - Copyright® 2020'})" class="btn">Ver creador del sitio web</a>
-
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

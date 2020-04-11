@@ -12,16 +12,34 @@
 		<script src="estilo/bootstrap/js/bootstrap.min.js"></script>
 		
 	    <!-- Compiled and minified CSS -->
-	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 	
 	    <!-- Compiled and minified JavaScript -->
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
- 
-			
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 	
+		<script type="text/javascript">
+			function mueveReloj(){
+		    momentoActual = new Date()
+		    hora = momentoActual.getHours()
+		    minuto = momentoActual.getMinutes()
+		    segundo = momentoActual.getSeconds()
+		
+		    horaImprimible = hora + " : " + minuto + " : " + segundo
+		
+		    document.form_reloj.reloj.value = horaImprimible
+		
+		    setTimeout("mueveReloj()",1000)
+			}
+		</script>
+	
   	</head>  
 
-	<body>
+	<body onload="mueveReloj()">
 	  <div class="container">
+	  	<h5 style="text-align: center">La hora es:</h5>
+	  	<form name="form_reloj">
+				<input style="text-align: center" type="text" name="reloj" size="10">
+		</form>
 	    <div class="row">
 	      <div class="col-lg-10 col-xl-9 mx-auto">
 	        <div class="card card-signin flex-row my-5">
