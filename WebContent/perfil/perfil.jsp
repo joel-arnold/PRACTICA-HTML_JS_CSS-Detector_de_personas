@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Perfil de <% out.print((String)session.getAttribute("nombre")); %></title>
+  <title>Perfil de <% out.print((String)session.getAttribute("nombreCompleto")); %></title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,12 +23,11 @@
 </head>
 
 <body id="page-top">
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none"><% out.print((String)session.getAttribute("nombre")); %></span>
+    <a class="navbar-brand js-scroll-trigger" href="#">
+      <span class="d-block d-lg-none"><% out.print((String)session.getAttribute("nombreCompleto")); %></span>
       <span class="d-none d-lg-block">
-      	<img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/<% out.print((String)session.getAttribute("nombre")); %>.jpg" alt="">
+      	<img onclick="mostrarMensaje()" class="img-fluid img-profile rounded-circle mx-auto mb-2" src="<% out.print((String)session.getAttribute("rutaImg")); %>" alt="">
       </span>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +55,7 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="principal">
       <div class="w-100">
-        <h1 class="mb-0"> <% out.print((String)session.getAttribute("nombre")); %>
+        <h1 class="mb-0"> <% out.print((String)session.getAttribute("nombreCompleto")); %>
           <span class="text-primary"><p class="lead mb-5"></p></span>
         </h1>
         <div class="subheading mb-5"><% out.print((String)session.getAttribute("direccion")); %>&nbsp;&nbsp;&nbsp;
@@ -89,9 +88,7 @@
           <li class="list-inline-item">
             <i class="fas fa-bacon"></i>
           </li>
-        </ul>
-
-        
+        </ul>    
         <ul class="fa-ul mb-0">
           <li>
             <i class="fa-li fa fa-check"></i>
@@ -113,6 +110,7 @@
         <h2 class="mb-5">Color Favorito</h2>
         <p>A <% out.print((String)session.getAttribute("nombre")); %> le encanta el color <% out.print((String)session.getAttribute("colorFav")); %>.</p>
       </div>
+        
     </section>
 
     <hr class="m-0">
@@ -121,20 +119,32 @@
       <div class="w-100">
         <h2 class="mb-5">Redes sociales de <% out.print((String)session.getAttribute("nombre")); %></h2>
         <div class="social-icons">
-          <a href="<% out.print((String)session.getAttribute("linkedin")); %>">
-            <i class="fab fa-linkedin-in"></i>
+          <% if((String)session.getAttribute("linkedin") != null){
+        	  %><a href="<% out.print((String)session.getAttribute("linkedin")); %>">
+            	<i class="fab fa-linkedin-in"></i>
           </a>
+          <% }if((String)session.getAttribute("instagram") != null){
+        	  %>          
           <a href="<% out.print((String)session.getAttribute("instagram")); %>">
-            <i class="fab fa-github"></i>
+            <i class="fab fa-instagram"></i>
           </a>
+          <% }if((String)session.getAttribute("facebook") != null){
+        	  %>
           <a href="<% out.print((String)session.getAttribute("facebook")); %>">
             <i class="fab fa-facebook-f"></i>
           </a>
+          <% } %>
+          <% if(((String)session.getAttribute("facebook") == null) && ((String)session.getAttribute("instagram") == null) && ((String)session.getAttribute("linkedin") == null)){
+        	%> <p class="mb-5"> A <% out.print((String)session.getAttribute("nombre")); %> no le gustan las redes sociales.</p> <%  
+          }%>
         </div>
       </div>
     </section>
 
   </div>
+	
+  <a onclick="M.toast({html: 'I am a toast'})" class="btn">Toast!</a>
+  <a onclick="M.toast({html: 'Joel Arnold - Copyright® 2020'})" class="btn">Ver creador del sitio web</a>
 
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
@@ -147,5 +157,11 @@
   <script src="js/resume.min.js"></script>
 
 </body>
+
+	<script type="text/javascript">
+		function mostrarMensaje() {
+		alert('Apretaste en la foto de <% out.print(session.getAttribute("nombre")); %>');
+		}
+	</script>
 
 </html>

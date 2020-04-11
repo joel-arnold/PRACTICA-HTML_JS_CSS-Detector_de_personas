@@ -13,6 +13,7 @@ public class Persona {
 	private String instagram;
 	private String linkedIn;
 	private String correo;
+	private String rutaImg;
 	
 	public String getNombre() {
 		return nombre;
@@ -108,5 +109,13 @@ public class Persona {
 
 	public void setCorreo(String correo) {
 		this.correo = correo;
+	}
+
+	public String getRutaImg() {
+		return rutaImg;
+	}
+
+	public void setRutaImg(String rutaImg) {
+		this.rutaImg = rutaImg;
 	}
 }

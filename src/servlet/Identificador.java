@@ -35,7 +35,7 @@ public class Identificador extends HttpServlet {
 		persona = controlador.buscarPersona(nombre);
 		
 		if(persona.getNombre() != "noExiste") {
-			sesion.setAttribute("nombre", persona.getNombre());
+			sesion.setAttribute("nombreCompleto", persona.getNombre());
 			sesion.setAttribute("fechaNac", persona.getFechaNac());
 			sesion.setAttribute("telefono", persona.getTelefono());
 			sesion.setAttribute("colorFav", persona.getColorFav());
@@ -47,6 +47,10 @@ public class Identificador extends HttpServlet {
 			sesion.setAttribute("linkedin", persona.getLinkedIn());
 			sesion.setAttribute("direccion", persona.getDireccion());
 			sesion.setAttribute("correo", persona.getCorreo());
+			String[] parts = persona.getNombre().split(" ");
+			String nombreSolo = parts[0];
+			sesion.setAttribute("nombre", nombreSolo);
+			sesion.setAttribute("rutaImg", persona.getRutaImg());
 			response.sendRedirect("perfil/perfil.jsp");
 		}
 		else {

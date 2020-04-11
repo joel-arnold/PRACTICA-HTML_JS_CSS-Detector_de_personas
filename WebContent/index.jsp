@@ -3,13 +3,20 @@
 	<head>    
 	    <title>Detector de personas</title>    
 	    <meta charset="UTF-8">
-	    <meta name="title" content="Detector mÃ¡gico de personas">
-	    <meta name="description" content="Esta pÃ¡gina te detecta magicamente quiÃ©n es quiÃ©n">
+	    <meta name="title" content="Detector mágico de personas">
+	    <meta name="description" content="Esta página te detecta magicamente quién es quién">
 	    
 		<script src="estilo/jquery-3.4.1.min.js"></script>
 	    <link href="estilo/fontawesome/css/all.css" rel="stylesheet">
 	    <link href="estilo/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 		<script src="estilo/bootstrap/js/bootstrap.min.js"></script>
+		
+	    <!-- Compiled and minified CSS -->
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	
+	    <!-- Compiled and minified JavaScript -->
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+ 
 			
   	</head>  
 
@@ -22,10 +29,10 @@
 	             <!-- Background image for card set in CSS! -->
 	          </div>
 	          <div class="card-body">
-	            <h5 class="card-title text-center">Detector mÃ¡gico de personas</h5>
+	            <h5 class="card-title text-center">Detector mágico de personas</h5>
 	            <form class="form-signin" action="Identificador" method=post>
 	              <div class="form-label-group">
-	                <input type="text" id="inputUserame" class="form-control" placeholder="Â¿QuiÃ©n sos?" name="persona" required autofocus>
+	                <input type="text" id="inputUserame" class="form-control" placeholder="¿Quién sos?" name="persona" required autofocus>
 	                <br>
 	              </div>
 	              <button class="btn btn-lg btn-primary btn-block text-uppercase" type="submit">Detectar</button>
@@ -35,6 +42,16 @@
 	      </div>
 	    </div>
 	  </div>
+	  <div class="card-title text-center">
+	  	<a onclick="M.toast({html: 'Joel Arnold© - Año 2020'})" class="btn">¿Quien creó el sitio?</a>
+	  </div>
 	</body>
+	
+	<script  type="text/javascript">
+	function mostrarHora() {
+		var time = new Date();
+		console.log(time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds());
+		}
+	</script>
 	
 </html>

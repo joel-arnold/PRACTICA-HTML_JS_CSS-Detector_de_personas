@@ -29,6 +29,7 @@ public class DatosPersona {
 				p.setLinkedIn(rs.getString("linkedin"));
 				p.setDireccion(rs.getString("direccion"));
 				p.setCorreo(rs.getString("correo"));
+				p.setRutaImg(rs.getString("rutaImg"));
 			}
 			else {
 				p = new Persona();
