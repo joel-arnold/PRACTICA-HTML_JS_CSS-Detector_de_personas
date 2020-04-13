@@ -26,10 +26,11 @@
 				<p>
 					<strong> <% out.print("No estás en la base de datos mágica."); %> </strong>
 				</p>
+			  <br><br>
+			  <a class="btn black center" onclick="M.toast({html: 'Dale, aguantá que desaparezca esto...', completeCallback: function(){window.location.href = '/DetectorDePersonas/index.jsp'}})">¡Volver a la página de inicio!</a>
 			  </div>
 			</div>
 		</div>
-				
 	</body>
 
 </html>

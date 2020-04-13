@@ -19,10 +19,16 @@
 
   <!-- Custom styles for this template -->
   <link href="css/resume.min.css" rel="stylesheet">
+  
+  <!-- Compiled and minified CSS -->
+    	<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">-->
+	
+	    <!-- Compiled and minified JavaScript -->
+		<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>-->
 
 </head>
 
-<body id="page-top">
+<body class="" id="page-top">
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
     <a class="navbar-brand js-scroll-trigger" href="#">
       <span class="d-block d-lg-none"><% out.print((String)session.getAttribute("nombreCompleto")); %></span>
@@ -47,7 +53,12 @@
         <li class="nav-item">
           <a class="nav-link js-scroll-trigger" href="#awards">Redes sociales</a>
         </li>
+        <li>
+        <a class="button black center" href="../index.jsp"><button type="button" class="btn btn-dark">Volver al inicio</button></a>
+        <!-- <a class="btn black center" onclick="M.toast({html: 'Dale, aguantá que desaparezca esto...', completeCallback: function(){window.location.href = '/DetectorDePersonas/index.jsp'}})">¡Volver al inicio!</a> -->
+        </li>
       </ul>
+        
     </div>
   </nav>
 

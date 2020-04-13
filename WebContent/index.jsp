@@ -16,31 +16,12 @@
 	
 	    <!-- Compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
- 	
-		<script type="text/javascript">
-			function mueveReloj(){
-		    momentoActual = new Date()
-		    hora = momentoActual.getHours()
-		    minuto = momentoActual.getMinutes()
-		    segundo = momentoActual.getSeconds()
-		
-		    horaImprimible = hora + " : " + minuto + " : " + segundo
-		
-		    document.form_reloj.reloj.value = horaImprimible
-		
-		    setTimeout("mueveReloj()",1000)
-			}
-		</script>
-	
+
   	</head>  
 
 	<body onload="mueveReloj()">
 	  <div class="container">
-	  	<h5 style="text-align: center">La hora es:</h5>
-	  	<form name="form_reloj">
-				<input style="text-align: center" type="text" name="reloj" size="10">
-		</form>
-	    <div class="row">
+	  	<div class="row">
 	      <div class="col-lg-10 col-xl-9 mx-auto">
 	        <div class="card card-signin flex-row my-5">
 	          <div class="card-img-left d-none d-md-flex">
@@ -63,13 +44,38 @@
 	  <div class="card-title text-center">
 	  	<a onclick="M.toast({html: 'Joel Arnold© - Año 2020'})" class="btn">¿Quien creó el sitio?</a>
 	  </div>
-	</body>
+	  </body>
+	<!-- <br><br><br><br><br><br><br><br><br>
+	<div class="card-title text-center">
+	  	<h5 style="text-align: center">Son las :</h5>
+	
+	  	<form name="form_reloj">
+				<input style="text-align: center" type="text" name="reloj" size="10">
+		</form>
+	</div> -->
+	
 	
 	<script  type="text/javascript">
 	function mostrarHora() {
 		var time = new Date();
 		console.log(time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds());
 		}
-	</script>
+	
+		</script>
+	
+			<script type="text/javascript">
+			function mueveReloj(){
+		    momentoActual = new Date()
+		    hora = momentoActual.getHours()
+		    minuto = momentoActual.getMinutes()
+		    //segundo = momentoActual.getSeconds()
+		
+		    horaImprimible = hora + " : " + minuto
+		
+		    document.form_reloj.reloj.value = horaImprimible
+		
+		    setTimeout("mueveReloj()",1000)
+			}
+		</script>
 	
 </html>
